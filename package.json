@@ -1,0 +1,25 @@
+{
+  "name": "foodapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "embla-carousel-autoplay": "^7.0.9",
+    "embla-carousel-react": "^7.0.9",
+    "parcel": "^2.8.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.8.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "process": "^0.11.10"
+  }
+}

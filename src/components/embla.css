@@ -1,0 +1,110 @@
+.embla {
+    --slide-spacing: 1rem;
+    --slide-size: 32%;
+    --slide-height: 19rem;
+     /* width: 	339px;
+    height: 304px; */
+    padding: 1.6rem;
+    background-color: #181b29;
+  }
+  .embla__viewport {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin-left: calc(var(--slide-spacing) * -1);
+  }
+  .embla__slide {
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+    position: relative;
+    transition: .3s all;
+  }
+  .embla__slide__img {
+    display: block;
+    height: var(--slide-height);
+    width: 100%;
+    /* width: 	339px;
+    height: 304px; */
+    /* object-fit: cover; */
+   object-fit: contain;
+    
+  }
+  .embla__slide:hover{
+    cursor: pointer;
+    transform: scale(1.06);
+  }
+
+  /* .embla__slide__number {
+    width: 4.6rem;
+    height: 4.6rem;
+    z-index: 1;
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    border-radius: 50%;
+    background-color: rgba(var(--background-site-rgb-value), 0.85);
+    line-height: 4.6rem;
+    font-weight: 900;
+    text-align: center;
+    pointer-events: none;
+  } */
+  .embla__slide__number > span {
+    color: var(--brand-primary);
+    background-image: linear-gradient(
+      45deg,
+      var(--brand-primary),
+      var(--brand-secondary)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.6rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  @media (max-width: 962px) and (min-width: 768px){
+    .embla {
+        --slide-spacing: 1rem;
+        --slide-size: 50%;
+        --slide-height: 19rem;
+        padding: 1.6rem;
+        background-color: #181b29;
+      }
+  }
+  @media (max-width: 768px) and (min-width: 570px){
+    .embla {
+        --slide-spacing: 1rem;
+        --slide-size: 50%;
+        --slide-height: 19rem;
+        padding: 1.6rem;
+        background-color: #181b29;
+      }
+  }
+  @media (max-width: 570px) and (min-width: 490px)
+  { .embla {
+    --slide-spacing: 1rem;
+    --slide-size: 60%;
+    --slide-height: 19rem;
+    padding: 1.6rem;
+    background-color: #181b29;
+  }
+
+  }
+  @media (max-width: 490px) and (min-width: 300px)
+  {
+    .embla {
+        --slide-spacing: 1rem;
+        --slide-size: 100%;
+        --slide-height: 19rem;
+        padding: 1.6rem;
+        background-color: #181b29;
+      }
+  }
