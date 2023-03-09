@@ -10,7 +10,7 @@ const Logo = ()=>{
         <>
         <div className="logo-detail">
         <a href="/">
-            <img src="http://www.pngimagesfree.com/LOGO/S/Swiggy/Swiggy-Logo-PNG.png" alt="logo" className="logo"/>
+            <img src="http://themes.potenzaglobalsolutions.com/html/the-zayka/assets/images/logo.png" alt="logo" className="logo"/>
         </a>
          <div className="eat_currentAddress_head">
          <span className='other'><a href='/'>Other</a></span>
