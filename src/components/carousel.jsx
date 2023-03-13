@@ -1,12 +1,10 @@
 import React from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
-import './embla.css';
+import '../css/embla.css';
 import Autoplay from 'embla-carousel-autoplay'
 import imageByIndex from './imageByIndex';
 
 const EmblaCarousel = (props) => {
-  // const { slides, options } = props
-  // const [emblaRef] = useEmblaCarousel(options, [Autoplay()])
   const { slides, options } = props
   const [emblaRef] = useEmblaCarousel(options, [Autoplay()])
 
