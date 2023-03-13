@@ -6,7 +6,7 @@ import Footer from './src/components/footer';
 import About from './src/components/about';
 import Error from './src/components/error';
 import Contact from './src/components/contact';
-import RestaurantMenu from './src/components/restaurantMenu';
+import RestaurantMenu from './src/components/RestaurantMenu';
 import { createBrowserRouter, RouterProvider ,Outlet } from 'react-router-dom';
 
 
