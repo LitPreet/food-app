@@ -29,6 +29,7 @@ body{
     align-items: center;
     padding: 0 20px;
     justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
  
 }
 
@@ -115,7 +116,7 @@ color: #e57a10;
     width: 100%;
     margin-top: 0;
     padding: 20px;
-    background-color: #dabb96;
+    background-color: #c9350c;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -262,7 +263,7 @@ color: #000;
 @media (max-width: 962px) and (min-width: 768px)
 {
     .nav-items{
-        margin-left: 20px;
+        margin-left: 42px;
       
     }
     .bir-img{

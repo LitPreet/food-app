@@ -1,0 +1,757 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.about-container{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:40px;
+}
+.delivery-container{
+    width: 650px;
+    border-radius: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d73204;
+   
+}
+.delivery-container img{
+    width:520px;
+}
+.profile-btn{
+   margin-left: 40%;
+   padding: 10px 5px;
+   border:none;
+   border-radius: 10px;
+   font-size: 19px;
+   font-weight: 600;
+   background-color: brown;
+   color: white;
+   cursor: pointer;
+}
+.p1,.p2,.p3{
+    font-size: 70px;
+    font-weight: bold;
+    margin-left: 26px;
+    margin-bottom: 10px;
+    
+}
+
+.p1{
+    color: rgb(46, 45, 45);
+    margin-top: 10px;
+}
+.p2,.p3{
+    color: #d73204;
+}
+.p3 span{
+    color: rgb(46, 45, 45);
+}
+.p2 span{
+    color: rgb(46, 45, 45);
+}
+.chef-container{
+    display: flex;
+    margin-left:20px;
+ margin-top:40px;
+}
+.chef-img{
+    width:80px;
+}
+.chef-p{
+    margin-top: 5px;
+    color: grey;
+    font-size: 16px;
+    margin-left: 6px;
+}
+.mobile-container{
+    width:95%;
+    height:400px;
+    background:rgb(201, 128, 2);
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    border-radius: 30px;
+}
+.phone-img{
+    height:400px;
+}
+.avatar-img{
+    width:300px;
+}
+.mob-p{
+    font-size:34px;
+    color:white;
+    font-weight:bolder;
+}
+.avatar{
+    width:50px;
+    border-radius:30px;
+    margin:5px 5px;
+}
+.rate-count-parent{
+    display:flex;
+}
+.rating-cont{
+    background-color: white;
+    font-size:30px;
+    width:180px;
+    border-top-right-radius: 80px;
+    border-top-left-radius: 80px;
+    margin-left: 20px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.play-img{
+    width: 50px;
+}
+.star-icon{
+    color: rgb(255, 136, 0);
+    font-size:18px;
+    margin-top:5px;
+}
+.num-rat{
+    font-size: 20px;
+    font-weight:bold;
+    margin-top:10px;
+}
+.text-cont{
+    width:100%;
+    display:flex;
+    align-items:center;
+    height:200px;
+    justify-content:space-around;
+}
+.text-p1{
+    font-size :39px;
+    font-weight:bold;
+    color: rgb(46, 45, 45);
+}
+.text-p1 span{
+    color:#d73204;
+}
+.text-p{
+    font-size:15px;
+    color:gray;
+    font-weight:600;
+    letter-spacing:1px;
+    margin-bottom:6px;
+}
+.products-cont{
+display:flex;
+  width:100%;
+  justify-content:space-around;
+}
+.products-cont div{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+.prod-img{
+    width:270px;
+    border-radius:100px;
+}
+.prod-img-burg{
+    width:350px;
+}
+.prod-cap{
+    font-size:25px;
+    font-weight:bold;
+     text-align:center;
+}
+.link{
+    color:#d73204;
+    font-size:20px;
+    font-weight:500;
+    text-align:center;
+    margin-top:16px;
+}
+@media (max-width:1168px) and (min-width:1062px)
+{
+    .mobile-container{
+        width: 95%;
+    }
+    .phone-img{
+        height: 340px;
+    }
+    .avatar-img{
+        width: 270px;
+    
+    }
+    .mob-p{
+        font-size: 28px;
+    }
+    .avatar{
+        width: 45px;
+    }
+    .rating-cont{
+        width: 170px;
+        height: 170px;
+        margin-left: 8px;
+    }
+}
+@media (max-width:1062px) and (min-width:962px)
+{
+    .delivery-container{
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 168px;
+    }
+.delivery-container img{
+    width: 484px;
+}
+.p1,.p2,.p3{
+    font-size: 60px;
+}
+.chef-img{
+    width:70px;
+}
+.chef-p{
+    font-size: 15px;
+}
+.mobile-container{
+    width: 95%;
+}
+.phone-img{
+    height: 340px;
+}
+.avatar-img{
+    width: 210px;
+
+}
+.mob-p{
+    font-size: 25px;
+}
+.avatar{
+    width: 42px;
+}
+.rating-cont{
+    width: 150px;
+    height: 150px;
+    margin-left: 8px;
+}
+.prod-img{
+    width: 250px;
+}
+.prod-img-burg{
+    width: 270px;
+}
+
+}
+@media (max-width:962px) and (min-width:768px) {
+    .delivery-container{
+        width: 420px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 150px;
+    }
+.delivery-container img{
+    width: 396px;
+}
+.p1,.p2,.p3{
+    font-size: 50px;
+    margin-bottom: 0;
+}
+.chef-img{
+    width:65px;
+}
+.chef-p{
+    font-size: 13px;
+}
+.mobile-container{
+    width: 95%;
+    height: 359px;
+}
+.phone-img{
+    height: 300px;
+}
+.avatar-img{
+    width: 200px;
+
+}
+.mob-p{
+    font-size: 22px;
+}
+.avatar{
+    width: 40px;
+}
+.rating-cont{
+    width: 110px;
+    height: 110px;
+    margin-left: 10px;
+}
+.prod-img{
+    width: 205px;
+}
+.prod-img-burg{
+    width: 230px;
+}
+.star-icon{
+    font-size: 13px;
+
+}
+.play-img{
+    width: 30px;
+}
+.num-rat{
+    font-size: 16px;
+}
+.text-p1{
+    font-size: 35px;
+}
+.text-p{
+    font-size: 13px;
+}
+.prod-cap{
+    font-size: 22px;
+}
+
+}
+@media (max-width:768px) and (min-width:600px) {
+    .about-container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .delivery-container{
+        width: 580px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 80px;
+    }
+.delivery-container img{
+    width: 470px;
+}
+.p1,.p2,.p3{
+    font-size: 55px;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.chef-img{
+    width:65px;
+}
+.chef-p{
+    font-size: 13px;
+}
+.mobile-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+.phone-img{
+    height: 240px;
+}
+.avatar-img{
+    width: 100%;
+    text-align: center;
+
+}
+.mob-p{
+    font-size: 22px;
+}
+.avatar{
+    width: 40px;
+}
+.rating-cont{
+    width: 110px;
+    height: 110px;
+    margin-left: 10px;
+}
+.products-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prod-img{
+    width: 205px;
+    margin-top: 40px;
+}
+.prod-img-burg{
+    width: 230px;
+    margin-top: 40px;
+}
+.star-icon{
+    font-size: 13px;
+
+}
+.link{
+    margin-top: 0;
+}
+.play-img{
+    width: 30px;
+}
+.num-rat{
+    font-size: 16px;
+}
+.text-p1{
+    font-size: 35px;
+}
+.text-p{
+    font-size: 13px;
+}
+.prod-cap{
+    font-size: 22px;
+}
+    .rate-count-parent{
+        display:flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .text-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .text-div{
+        margin-top: 20px;
+    }
+    .text-p,.text-p1{
+        text-align: center;
+    }
+}
+@media (max-width:600px) and (min-width:500px) {
+    .about-container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .delivery-container{
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 80px;
+    }
+.delivery-container img{
+    width: 420px;
+}
+.p1,.p2,.p3{
+    font-size: 45px;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.chef-img{
+    width:65px;
+}
+.chef-p{
+    font-size: 13px;
+}
+.mobile-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+.phone-img{
+    height: 240px;
+}
+.avatar-img{
+    width: 100%;
+    text-align: center;
+
+}
+.mob-p{
+    font-size: 22px;
+}
+.avatar{
+    width: 40px;
+}
+.rating-cont{
+    width: 110px;
+    height: 110px;
+    margin-left: 10px;
+}
+.products-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prod-img{
+    width: 205px;
+    margin-top: 40px;
+}
+.prod-img-burg{
+    width: 230px;
+    margin-top: 40px;
+}
+.star-icon{
+    font-size: 13px;
+
+}
+.link{
+    margin-top: 0;
+}
+.play-img{
+    width: 30px;
+}
+.num-rat{
+    font-size: 16px;
+}
+.text-p1{
+    font-size: 30px;
+}
+.text-p{
+    font-size: 12px;
+}
+.prod-cap{
+    font-size: 22px;
+}
+    .rate-count-parent{
+        display:flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .text-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .text-div{
+        margin-top: 20px;
+    }
+    .text-p,.text-p1{
+        text-align: center;
+    }
+}
+@media (max-width:500px) and (min-width:400px) {
+    .about-container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .delivery-container{
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 80px;
+    }
+.delivery-container img{
+    width: 350px;
+}
+.p1,.p2,.p3{
+    font-size: 40px;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.chef-img{
+    width:65px;
+}
+.chef-p{
+    font-size: 13px;
+}
+.mobile-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+.phone-img{
+    height: 240px;
+}
+.avatar-img{
+    width: 100%;
+    text-align: center;
+
+}
+.mob-p{
+    font-size: 22px;
+}
+.avatar{
+    width: 40px;
+}
+.rating-cont{
+    width: 110px;
+    height: 110px;
+    margin-left: 10px;
+}
+.products-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prod-img{
+    width: 200px;
+    margin-top: 40px;
+}
+.prod-img-burg{
+    width: 220px;
+    margin-top: 40px;
+}
+.star-icon{
+    font-size: 13px;
+
+}
+.link{
+    margin-top: 0;
+}
+.play-img{
+    width: 30px;
+}
+.num-rat{
+    font-size: 16px;
+}
+.text-p1{
+    font-size: 30px;
+}
+.text-p{
+    font-size: 12px;
+}
+.prod-cap{
+    font-size: 22px;
+}
+    .rate-count-parent{
+        display:flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .text-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .text-div{
+        margin-top: 20px;
+    }
+    .text-p,.text-p1{
+        text-align: center;
+    }
+}
+@media (max-width:400px) and (min-width:300px) {
+    .about-container{
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+    .delivery-container{
+        width: 330px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 80px;
+    }
+.delivery-container img{
+    width: 310px;
+}
+.p1,.p2,.p3{
+    font-size: 40px;
+    margin-left: 0;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.chef-img{
+    width:65px;
+}
+.chef-p{
+    font-size: 13px;
+}
+.mobile-container{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+}
+.phone-img{
+    height: 240px;
+}
+.avatar-img{
+    width: 100%;
+    text-align: center;
+
+}
+.mob-p{
+    font-size: 22px;
+}
+.avatar{
+    width: 40px;
+}
+.rating-cont{
+    width: 110px;
+    height: 110px;
+    margin-left: 10px;
+}
+.products-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prod-img{
+    width: 205px;
+    margin-top: 40px;
+}
+.prod-img-burg{
+    width: 230px;
+    margin-top: 40px;
+}
+.star-icon{
+    font-size: 13px;
+
+}
+.link{
+    margin-top: 0;
+}
+.play-img{
+    width: 30px;
+}
+.num-rat{
+    font-size: 16px;
+}
+.text-p1{
+    font-size: 30px;
+}
+.text-p{
+    font-size: 12px;
+}
+.prod-cap{
+    font-size: 22px;
+}
+    .rate-count-parent{
+        display:flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .text-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .text-div{
+        margin-top: 20px;
+    }
+    .text-p,.text-p1{
+        text-align: center;
+    }
+}

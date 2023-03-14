@@ -35,7 +35,7 @@ const Body = ()=>{
         setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
         setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     } 
-    return ( 
+    return (allRestaurants.length == 0) ? <Shimmer/> : ( 
         <>
          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
          <p className="pop-p">Popular Cuisines</p>
@@ -60,7 +60,7 @@ const Body = ()=>{
           }}>< BsSearch className="bs-search"/></button>
           
          </div>
-        { (allRestaurants.length === 0) ? <Shimmer/> :
+        { 
             <div className="restaurant-list">
          {
             filteredRestaurants.map((restaurant)=>{
