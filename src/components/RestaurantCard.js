@@ -1,4 +1,4 @@
-import { IMG_CDN_URL } from "../../contant"
+import { IMG_CDN_URL } from "../../constant"
 import { TbDiscount2 } from 'react-icons/tb';
 
 const RestrauntCard =({name,cuisines,cloudinaryImageId,lastMileTravelString,costForTwoString,slaString,avgRating})=>{

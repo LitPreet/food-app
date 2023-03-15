@@ -1,5 +1,6 @@
 import Delivery from "../assets/img/delivery.png";
 import React from "react";
+import {useState} from 'react';
 import chef from "../assets/img/chef.png";
 import phone from "../assets/img/phone.png";
 import pizza from "../assets/img/pizza.png";
@@ -7,14 +8,29 @@ import burger from "../assets/img/burger.png";
 import pepsi from "../assets/img/pepsi.jpg";
 import { AiFillStar } from "react-icons/ai";
 import { FaStarHalf } from "react-icons/fa";
-
 import "../css/about.css";
-import { Link } from "react-router-dom";
+import { Link ,Outlet } from "react-router-dom";
+
 
 const About = () => {
+  const [show, setShow] = useState(false);
+  
   return (
+    
     <>
-      <button className="profile-btn">Show my profile</button>
+    { show ? ( 
+      <>
+      <Link to={"/about"}><button className="btn5" onClick={()=>{
+        setShow(false)
+      }}>Hide My Profile</button></Link>
+      <Outlet />
+      </>
+    
+    ) : (
+      <Link to={"profile"}><button className="btn5" onClick={()=>{
+        setShow(true)
+      }}>Show My Profile</button></Link>
+    ) }
       <div className="about-container">
         <div>
           <p className="p1">Fastest</p>

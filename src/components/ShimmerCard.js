@@ -1,5 +1,5 @@
 import '../css/shimmerMenu.css'
-import { shimmer_menu_card_unit } from '../../contant'
+import { shimmer_menu_card_unit } from '../../constant.js'
 export const MenuShimmer = () => {
     return (
         <>

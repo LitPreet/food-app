@@ -7,7 +7,7 @@ import {
   swiggy_api_URL,
   swiggy_menu_api_URL,
   ITEM_IMG_CDN_URL,
-} from "../../contant";
+} from "../../constant";
 import "../css/restaurant.css";
 import respo from "../assets/img/res-img.webp";
 import { AiFillHome } from "react-icons/ai";

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useState } from "react";
 import ReactDOM  from 'react-dom/client';
-import { IMG_CDN_URL } from "../../contant";
-import { restaurantList } from "../../contant";
+import { IMG_CDN_URL } from "../../constant";
+import { restaurantList } from "../../constant";
 import RestrauntCard from "./RestaurantCard";
 import { BsSearch } from 'react-icons/bs';
 import Shimmer from "./shimmer";
