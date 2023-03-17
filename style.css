@@ -20,7 +20,9 @@ body {
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
 }
-
+.logo-img{
+  width:60px;
+}
 .other {
   font-size: 17px;
   font-weight: bold;
@@ -209,7 +211,12 @@ body {
     font-size: 13px;
   }
 }
-
+@media screen and (max-width:768px)
+{
+  .logo-img{
+    width:50px;
+  }
+}
 @media (max-width: 768px) and (min-width: 600px) {
   
   .pop-p {
@@ -289,7 +296,7 @@ body {
   }
 
   .bir-img {
-    width: 30px;
+    width: 35px;
   }
   .pop-p {
     font-size: 20px;
@@ -331,7 +338,7 @@ body {
  
  
   .bir-img {
-    width: 25px;
+    width: 30px;
   }
   .pop-p {
     font-size: 20px;

@@ -1,4 +1,5 @@
 import React from 'react'
+import Logo from '../../assets/img/Swiggy-Logo-PNG.png'
 import {Nav,NavbarContainer, NavLogo , MobileIcon,NavLinks, NavItem, NavMenu,NavBtnLink,NavBtn } from './NavbarElement'
  import { FaBars } from 'react-icons/fa';
 const Navbar = ({toggle}) => {
@@ -7,7 +8,7 @@ const Navbar = ({toggle}) => {
    <Nav>
     <NavbarContainer>
         <NavLogo to="/">
-            Swiggy
+            <img src={Logo} className="logo-img"/>
         </NavLogo>
         <MobileIcon onClick={toggle}> 
           <FaBars />
