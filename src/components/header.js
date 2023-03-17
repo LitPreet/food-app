@@ -20,11 +20,7 @@ const Logo = ()=>{
         </a>
 
          <div className="eat_currentAddress_head">
-         {/* <span className='other'><a href='/'>Other</a></span>
         
-
-         <span className='add'>
-           M30 sec-5 Gurugram, India?</span> */}
      </div>
      </div>
      </>

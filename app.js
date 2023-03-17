@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM  from 'react-dom/client';
 import Header from './src/components/header';
+import HeaderR from './pages';
 import Body from './src/components/body';
 import Footer from './src/components/footer';
 import About from './src/components/about';
@@ -14,7 +15,7 @@ import { createBrowserRouter, RouterProvider ,Outlet } from 'react-router-dom';
 const AppLayout = ()=>{
     return(
         <>
-        <Header />
+        <HeaderR />
         <Outlet />
         <Footer />
          </>

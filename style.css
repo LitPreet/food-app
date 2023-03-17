@@ -1,448 +1,363 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@400;500&family=Fredoka+One&family=Lora:ital@1&family=Noto+Serif+Gujarati:wght@300&family=Orbitron&family=Poppins&family=Roboto&family=Space+Grotesk&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@400;500&family=Fredoka+One&family=Lora:ital@1&family=Merienda&family=Noto+Serif+Gujarati:wght@300&family=Orbitron&family=Poppins&family=Roboto&family=Space+Grotesk&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@400;500&family=Fredoka+One&family=Lora:ital@1&family=Merienda&family=Noto+Serif+Gujarati:wght@300&family=Orbitron&family=Poppins&family=Roboto&family=Space+Grotesk&display=swap");
 
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Alfa Slab One', cursive;
-font-family: 'Dancing Script', cursive;
-font-family: 'Fredoka One', cursive;
-font-family: 'Lora', serif;
-font-family: 'Noto Serif Gujarati', serif;
-font-family: 'Orbitron', sans-serif;
-font-family: 'Poppins', sans-serif;
-font-family: 'Roboto', sans-serif;
-font-family: 'Space Grotesk', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Alfa Slab One", cursive;
+  font-family: "Dancing Script", cursive;
+  font-family: "Fredoka One", cursive;
+  font-family: "Lora", serif;
+  font-family: "Noto Serif Gujarati", serif;
+  font-family: "Orbitron", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
-body{
-    background-color: rgb(255, 255, 255);
-    overflow-x: hidden;
-    
+body {
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
 }
-.navbar{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.other {
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.child h3 {
+  background-color: #e57a10;
+  width: 300px;
+  height: 300px;
+  margin: 0 20px;
+  text-align: center;
+}
+.child h3 {
+  margin-left: 20px;
+}
+.child2 {
+  background-color: #0d0b09;
+  width: 300px;
+  height: 300px;
+  margin-left: 20px;
+}
+.carousel-container {
+  padding: 0 2rem;
+}
+.other a {
+  color: #000;
+  margin-right: 10px;
+}
+.slider {
+  display: flex;
+  gap: 0.5rem;
+  width: 100%;
+}
+.slider .child {
+  width: 50%;
+}
+
+.restaurant-list {
+  width: 100%;
+  margin-top: 0;
+  padding: 20px;
+  background-color: #c9350c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  width: 280px;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: 0.5s all;
+  cursor: pointer;
+  margin: 10px;
+  background-color: white;
+}
+.card:hover {
+  -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+}
+.card-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.f-name {
+  font-size: 22px;
+  margin: 10px 0;
+  margin-left: 9px;
+  font-weight: 600;
+  color: black;
+}
+.cuisnines {
+  font-size: 15px;
+  margin: 7px 9px;
+  color: #6b6e7b;
+}
+.rate {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+.time,
+.price {
+  font-size: 14px;
+  color: black;
+}
+.star-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+.star {
+  width: 20px;
+  margin-right: 3px;
+}
+.offer {
+  display: flex;
+  width: 100%;
+  font-size: 15px;
+  margin-top: 7px;
+  align-items: center;
+  justify-content: center;
+  color: #a12a03;
+}
+.delivery {
+  text-transform: uppercase;
+  font-size: 15px;
+  margin-top: 15px;
+  text-align: center;
+  color: #a12a03;
+}
+.search-container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #fff;
+}
+.search-input-box {
+  width: 700px;
+  padding: 12px 10px;
+  border: 1px solid gray;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.bs-search {
+  font-size: 20px;
+  color: white;
+}
+.search-button {
+  padding: 12px 10px;
+  cursor: pointer;
+  background-color: #e57a10;
+  border: none;
+}
+
+.bir-img {
+  width: 70px;
+  margin-left: 9px;
+  cursor: pointer;
+}
+.pop-p {
+  font-size: 35px;
+  padding: 10px 0;
+  font-weight: bold;
+  text-align: center;
+  background-color: #fff;
+}
+.popular-cuisines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+@media (max-width: 1082px) and (min-width: 962px) {
+
+  .other,
+  .add {
+    font-size: 13px;
+  }
+}
+@media (max-width: 962px) and (min-width: 768px) {
+ 
+  .bir-img {
+    width: 55px;
+  }
+  .search-input-box {
+    width: 500px;
+  }
+ 
+  .other,
+  .add {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 600px) {
+  
+  .pop-p {
+    font-size: 30px;
+  }
+  .f-name {
+    font-size: 18px;
+  }
+  .cuisnines {
+    font-size: 14px;
+  }
+  .rate,
+  .time,
+  .price {
+    font-size: 13px;
+  }
+  .offer,
+  .delivery {
+    font-size: 13px;
+  }
+  .bir-img {
+    width: 44px;
+  }
+  .search-input-box {
+    width: 400px;
+  }
+  .other,
+  .add {
+    font-size: 12px;
+  }
  
 }
 
-.other{
-    font-size: 17px;
-   font-weight: bold;
-   
-}
+@media (max-width: 600px) and (min-width: 500px) {
 
-.child h3{
-background-color: #e57a10;
-width: 300px;
-height: 300px;
-margin: 0 20px;
-text-align: center;
-}
-.child h3{
-    margin-left: 20px;
-}
-.child2{
-    background-color: #0d0b09;
-width: 300px;
-height: 300px;
-margin-left: 20px;
-}
-.carousel-container{
-    padding: 0 2rem;
-}
-.other a{
-    color: #000;
-    margin-right: 10px;
-}
-.slider{
-display: flex;
-gap: 0.5rem;
-width: 100%;
-}
-.slider .child{
-    width: 50%;
-}
-
-.logo-detail{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.logo{
-    width: 60px;
-}
-.eat_currentAddress_head {
-    display: flex;
-    max-width: 260px;
-    margin-left: 20px;
-    align-items: center;
-}
-.nav-ul{
-    display: flex;
-}
-.nav-ul li {
-    display: flex;
-    align-items: center;
-    color: #6b6e7b;
-
-}
-.icon{
-    margin-right: 5px;
-}
-.nav-items{
-    margin-left: 90px;
-    list-style-type: none;
-    
-}
-.nav-items{
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: #000;
-    transition: 0.4s all;
-}
-.nav-items:hover{
-color: #e57a10;
-}
-.restaurant-list{
-    width: 100%;
-    margin-top: 0;
-    padding: 20px;
-    background-color: #c9350c;
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-}
-.card{
-       width: 280px;
-       height: 420px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 10px;
-        -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
-        transition: .5s all;
-        cursor: pointer;
-        margin:10px;
-        background-color: white;
-}
-.card:hover {
-    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
-}
-.card-img{
-    height: 200px;
-    object-fit: cover;
-    width: 100%;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
-}
-.f-name{
-    font-size: 22px;
-    margin: 10px 0;
-    margin-left:9px;
-    font-weight:600;
-    color: black;
-}
-.cuisnines{
-    font-size: 15px;
-      margin: 7px 9px;
-      color: #6b6e7b;
-
-
-}
-.rate{
-font-size:14px;
-display: flex;
-align-items: center;
-color: #000;
-
-
-}
-.time,.price{
-    font-size: 14px;
-    color:black;
-}
-.star-row{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 10px;
-    
-    
-}
-.star{
-    width: 20px;
-    margin-right: 3px;
-}
-.offer{
-    display: flex;
-    width: 100%;
-    font-size: 15px;
-    margin-top: 7px;
-    align-items: center;
-    justify-content: center;
-    color: #a12a03;
-}
-.delivery{
-    text-transform: uppercase;
-    font-size: 15px;
-    margin-top: 15px;
-    text-align: center;
-    color: #a12a03;
-}
-.search-container{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-    background-color: #fff;
-}
-.search-input-box{
-    width: 700px;
-    padding: 12px 10px;
-    border: 1px solid gray;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-}
-.bs-search{
+  
+  .other,
+  .add {
+    font-size: 12px;
+  }
+  .bir-img {
+    width: 42px;
+  }
+  .pop-p {
     font-size: 20px;
-    color: white;
-}
-.search-button{
-    padding: 12px 10px;
-    cursor: pointer;
-    background-color: #e57a10;
-    border: none;
-}
+  }
+  .search-input-box {
+    width: 300px;
+    padding: 10px 9px;
+    font-size: 16px;
+  }
+  .search-button {
+    padding: 10px 9px;
+  }
 
-.bir-img{
-    width: 70px;
-    margin-left: 9px;
-    cursor: pointer;
-}
-.pop-p{
-   font-size: 35px;
-   padding: 10px 0;
-   font-weight: bold;
-   text-align: center;
-   background-color: #fff;
-}
-.popular-cuisines{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px 0;
-    background-color: #fff;
-}
-  
-@media (max-width: 1082px) and (min-width: 962px)
-{
-.nav-items{
-    margin-left: 40px;
-  
-}
-.nav-items{
-    font-size: 15px;
-}
-.other,.add{
+  .f-name {
+    font-size: 18px;
+  }
+  .cuisnines {
+    font-size: 14px;
+  }
+  .rate,
+  .time,
+  .price {
     font-size: 13px;
+  }
+  .offer,
+  .delivery {
+    font-size: 13px;
+  }
 }
-}
-@media (max-width: 962px) and (min-width: 768px)
-{
-    .nav-items{
-        margin-left: 42px;
-      
-    }
-    .bir-img{
-        width: 55px;
-    }
-    .search-input-box{
-        width: 500px;
-    }
-    .nav-items{
-        font-size: 14px;
-    }
-    
-    .other,.add{
-        font-size: 13px;
-    }
-}
+@media (max-width: 500px) and (min-width: 400px) {
 
-@media (max-width: 768px) and (min-width: 600px)
-{
-    #nav-link{
-        display: none;
-    }
-    .pop-p{
-        font-size: 30px;
-    }
-    .f-name{
-        font-size: 18px;
-    }
-    .cuisnines{
-        font-size: 14px;
-    }
-    .rate,.time,.price{
-        font-size: 13px;
-    }
-    .offer,.delivery{
-        font-size: 13px;
-    }
-    .bir-img{
-        width: 44px;
-    }
-    .search-input-box{
-        width: 400px;
-    }
-    .other,.add{
-font-size: 12px;
-    }
-    .logo{
-        width: 68px;
-    }
-    .nav-items {
-        font-size: 20px;
-    }
-    
-}
+  .other,
+  .add {
+    font-size: 12px;
+  }
 
-@media (max-width: 600px) and (min-width: 500px)
-{
-    #nav-link{
-        display: none;
-    }
-    .other,.add{
-font-size: 12px;
-    }
-    .bir-img{
-        width: 42px;
-    }
-    .pop-p{
-        font-size: 20px;
-    }
-    .search-input-box{
-        width: 300px;
-        padding: 10px 9px;
-        font-size: 16px;
-    }
-    .search-button{
-        padding: 10px 9px;
-    }
-    .logo{
-        width: 68px;
-    }
-    .f-name{
-        font-size: 18px;
-    }
-    .cuisnines{
-        font-size: 14px;
-    }
-    .rate,.time,.price{
-        font-size: 13px;
-    }
-    .offer,.delivery{
-        font-size: 13px;
-    }
+  .bir-img {
+    width: 30px;
+  }
+  .pop-p {
+    font-size: 20px;
+  }
+  .search-input-box {
+    width: 300px;
+    padding: 10px 9px;
+    font-size: 16px;
+  }
+  .search-button {
+    padding: 10px 9px;
+  }
+ 
+  .f-name {
+    font-size: 18px;
+  }
+  .cuisnines {
+    font-size: 14px;
+  }
+  .rate,
+  .time,
+  .price {
+    font-size: 13px;
+  }
+  .offer,
+  .delivery {
+    font-size: 13px;
+  }
 }
-@media (max-width: 500px) and (min-width: 400px)
-{
-    #nav-link{
-        display: none;
-    }
-    .other,.add{
-font-size: 12px;
-    }
-    .logo{
-        width: 58px;
-    }
-    .bir-img{
-        width: 30px;
-    }
-    .pop-p{
-        font-size: 20px;
-    }
-    .search-input-box{
-        width: 300px;
-        padding: 10px 9px;
-        font-size: 16px;
-    }
-    .search-button{
-        padding: 10px 9px;
-    }
-    .logo{
-        width: 68px;
-    }
-    .f-name{
-        font-size: 18px;
-    }
-    .cuisnines{
-        font-size: 14px;
-    }
-    .rate,.time,.price{
-        font-size: 13px;
-    }
-    .offer,.delivery{
-        font-size: 13px;
-    }
-}
-@media (max-width: 400px) and (min-width: 300px)
-{
-    body{
-        overflow-x: hidden;
-    }
-    #nav-link{
-        display: none;
-    }
-    .other,.add{
-font-size: 12px;
-    }
-    .logo{
-        width: 53px;
-    }
-    .nav-items{
-        font-size: 10px;
-        margin-left: 15px;
-    }
-    .bir-img{
-        width: 25px;
-    }
-    .pop-p{
-        font-size: 20px;
-    }
-    .search-input-box{
-        width: 300px;
-        padding: 10px 9px;
-        font-size: 16px;
-    }
-    .search-button{
-        padding: 10px 9px;
-    }
-    .logo{
-        width: 68px;
-    }
-    .f-name{
-        font-size: 18px;
-    }
-    .cuisnines{
-        font-size: 14px;
-    }
-    .rate,.time,.price{
-        font-size: 13px;
-    }
-    .offer,.delivery{
-        font-size: 13px;
-    }
+@media (max-width: 400px) and (min-width: 300px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .other,
+  .add {
+    font-size: 12px;
+  }
+ 
+ 
+  .bir-img {
+    width: 25px;
+  }
+  .pop-p {
+    font-size: 20px;
+  }
+  .search-input-box {
+    width: 300px;
+    padding: 10px 9px;
+    font-size: 16px;
+  }
+  .search-button {
+    padding: 10px 9px;
+  }
+ 
+  .f-name {
+    font-size: 18px;
+  }
+  .cuisnines {
+    font-size: 14px;
+  }
+  .rate,
+  .time,
+  .price {
+    font-size: 13px;
+  }
+  .offer,
+  .delivery {
+    font-size: 13px;
+  }
 }
