@@ -122,7 +122,7 @@ const Cart = () => {
                       Rs. {(parseInt(item?.price) / 100).toFixed(2)}{" "}
                     </p>
                     <p className="item-total-price">
-                      Total price: ₹{" "}
+                      Total: ₹{" "}
                       {(item.itemCount * (parseInt(item?.price) / 100)).toFixed(
                         2
                       )}
