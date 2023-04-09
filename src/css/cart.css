@@ -10,7 +10,7 @@ body{
 
 .toast {
   left: 0;
-  bottom: 60%;
+  bottom: 75%;
   width: 500px;
   position: absolute;
   border-radius: 12px;
@@ -498,6 +498,20 @@ height: 100vh;
     .item-name{
       font-size: 18px;
     }
+    .toast {
+      width: 400px;
+      z-index: 10;
+      background: white;
+      border-radius: 12px;
+      padding: 17px 32px 18px 23px;
+      transition: all .5s cubic-bezier(.68, -.55, .265, 1.35);
+      position: absolute;
+      bottom: 60%;
+      left: 0;
+      overflow: hidden;
+      transform: translateX(calc(100% + 30px));
+      box-shadow: 0 6px 20px -5px #0000001a;
+  }
      }
      @media  (max-width: 600px) and (min-width: 500px){
       .section{
@@ -508,6 +522,9 @@ height: 100vh;
       }
       .cart-container{
         width: 490px;
+      }
+      .toast{
+        width: 400px;
       }
       .slogan{
         font-size: 19px;
@@ -551,6 +568,9 @@ height: 100vh;
       .item-name{
         font-size: 18px;
       }
+      .cross{
+        font-size: 16px;
+      }
        }
        @media  (max-width: 500px) and (min-width: 430px){
         .section{
@@ -561,6 +581,9 @@ height: 100vh;
         }
         .cart-container{
           width: 426px;
+        }
+        .toast{
+          width: 400px;
         }
         .slogan{
           font-size: 19px;
@@ -634,11 +657,18 @@ height: 100vh;
           .cart-container{
             width: 100%;
           }
+          .toast{
+            width: 320px;
+          }
           .slogan{
             font-size: 16px;
           }
           .cart-head{
             font-size: 31px;
+          }
+          .cross{
+            padding: 4px 9px;
+            font-size: 14px;
           }
           .checkout-div{
             width: 80%;

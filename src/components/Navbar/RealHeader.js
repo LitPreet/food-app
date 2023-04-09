@@ -28,14 +28,18 @@ const Navbar = ({ toggle }) => {
           <NavLogo to="/">
             <img src={Logo} className="logo-img" />
           </NavLogo>
-          <MobileIcon onClick={toggle}>
+          <div className="mob-art">
           <NavCart to="/cart"><img src={Cart} className="trolley"/><span className="cart-num">{cartItems.length}</span></NavCart>
+
+          <MobileIcon onClick={toggle}>
+          
           { isAuthenticated && <AvatarSec>
               <IMG src={user.picture} className="avatar-user"/>
               <P>{user.name}</P>
             </AvatarSec>}
             <FaBars />
           </MobileIcon>
+          </div>
           <NavMenu>
             <NavItem>
               <NavLinks to="/">Home</NavLinks>

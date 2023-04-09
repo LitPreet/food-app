@@ -44,7 +44,6 @@ display:none;
 @media screen and (max-width:768px)
 {
     display:flex;
-    margin-top:20px;
     transform = translate(-100%,60%);
     font-size:1.8rem;
     cursor:pointer;

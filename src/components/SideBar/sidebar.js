@@ -20,9 +20,7 @@ const SideBar = ({isOpen,toggle})=>{
             <SidebarLink to="/instamart" onClick={toggle}>
                 Instamart
             </SidebarLink>
-            {/* <SidebarLink to="/cart" onClick={toggle}>
-                Cart
-            </SidebarLink> */}
+          
         </SidebarMenu>
         <SideBtnWrap>
         {isAuthenticated ?  (

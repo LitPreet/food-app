@@ -33,7 +33,7 @@ const Cart = () => {
     setEmptyCart(true);
   };
 
-   const [showToast, setShowToast] = useState(true);
+   const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     // show the toast message for 5 seconds when showToast is true
@@ -88,7 +88,7 @@ const Cart = () => {
               </span>
             </div>
           <button className="cross" onClick={() => setShowToast(false)}>
-      <RxCross1 />
+      <RxCross1  />
     </button>
           </div>
 

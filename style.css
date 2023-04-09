@@ -57,6 +57,10 @@ body {
 .carousel-container {
   padding: 0 2rem;
 }
+.mob-art{
+  display:none;
+
+}
 .other a {
   color: #000;
   margin-right: 10px;
@@ -227,6 +231,11 @@ body {
 {
   .logo-img{
     width:50px;
+  }
+  .mob-art{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (max-width: 768px) and (min-width: 600px) {
