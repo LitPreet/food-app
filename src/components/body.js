@@ -26,10 +26,17 @@ const Body = ()=>{
   
       async function getRestaurants()
       {
-          const data = await fetch("https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
-          const json = await data.json();
+        try{
+          // const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
+            const response = await fetch("https://instafood.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001");
+
+          const json = await response.json();
           setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
           setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+        }
+        catch (error) {
+          console.log(error);
+        }
       } 
   
     return (allRestaurants.length == 0) ? <Shimmer/>
