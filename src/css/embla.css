@@ -27,9 +27,6 @@
     display: block;
     height: var(--slide-height);
     width: 100%;
-    /* width: 	339px;
-    height: 304px; */
-    /* object-fit: cover; */
    object-fit: contain;
     
   }
@@ -38,20 +35,7 @@
     transform: scale(1.06);
   }
 
-  /* .embla__slide__number {
-    width: 4.6rem;
-    height: 4.6rem;
-    z-index: 1;
-    position: absolute;
-    top: 0.6rem;
-    right: 0.6rem;
-    border-radius: 50%;
-    background-color: rgba(var(--background-site-rgb-value), 0.85);
-    line-height: 4.6rem;
-    font-weight: 900;
-    text-align: center;
-    pointer-events: none;
-  } */
+
   .embla__slide__number > span {
     color: var(--brand-primary);
     background-image: linear-gradient(

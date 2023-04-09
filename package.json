@@ -2,7 +2,7 @@
   "name": "foodapp",
   "version": "1.0.0",
   "description": "",
-
+  
   "scripts": {
     "start": "parcel index.html ",
     "build": "parcel build index.html"
@@ -11,12 +11,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@auth0/auth0-react": "^2.0.1",
+    "@reduxjs/toolkit": "^1.9.3",
     "embla-carousel-autoplay": "^7.0.9",
     "embla-carousel-react": "^7.0.9",
     "parcel": "^2.8.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.2",
     "styled-components": "^5.3.9"
   },

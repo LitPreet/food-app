@@ -2,6 +2,12 @@ import React from 'react'
 import '../css/shimmer.css'
 const Shimmer = () => {
   return (
+    <>
+    <div className="shim-min">
+      <div className='shim1'></div>
+      <div className='shim2'></div>
+      <div className='shim3'></div>
+    </div>
     <div className="restaurant-list">
     {Array(15)
         .fill("")
@@ -22,6 +28,7 @@ const Shimmer = () => {
 </div>
   ))}
   </div>
+  </>
   )
 }
 

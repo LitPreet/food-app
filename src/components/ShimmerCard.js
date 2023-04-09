@@ -1,44 +1,29 @@
-import '../css/shimmerMenu.css'
-import { shimmer_menu_card_unit } from '../../constant.js'
+import "../css/shimmerMenu.css";
+
 export const MenuShimmer = () => {
-    return (
-        <>
-        <div className='main'></div>
-      <div className="restaurant-menu">
-        <div className="restaurant-summary stroke-color animate">
-          <img className="shimmer-img stroke animate" />
-          <div className="restaurant-summary-details">
-            <h2 className="shimmer-w40  stroke animate"></h2>
-            <p className="shimmer-w20 stroke animate"></p>
-            <div className="shimmer-w60  stroke animate">
-            </div>
+  return (
+    <>
+      <div className="shimme">
+        <div className="first-divgi">
+          <div id="box1" className="shine"></div>
+          <div className="lineSeries">
+            <div id="line1" className="shine"></div>
+            <div id="line2" className="shine"></div>
+            <div id="line3" className="shine"></div>
+            <div id="line3" className="shine"></div>
           </div>
         </div>
-  
-        <div className="restaurant-menu-content">
-          <div className="menu-items-container">
-            <div className="menu-title-wrap ">
-              <h3 className="shimmer-w40 stroke animate"></h3>
-              <p className="shimmer-w20 stroke animate"></p>
-            </div>
-            <div className="menu-items-list">
-              { Array(shimmer_menu_card_unit).fill("").map( (element, index)  => 
-              <div className="shimmer-menu-card" key={index}>
-                <div className="shimmer-item-details">
-                  <h3 className="shimmer-w40  stroke animate"></h3>
-                  <p className="shimmer-w20  stroke animate"> </p>
-                  <p className="shimmer-w60  stroke animate"></p>
-                </div>
-                <div className="shimmer-img-wrapper">
-                  <img className="shimmer-img stroke animate" /> 
-                  <div className="shimmer-btn stroke animate"> </div>
-                </div>
-              </div>
-              )}
-            </div>
-          </div>
+        <br />
+
+        <div className="first-divgi2">
+          <div className="shine" id="photo10"></div>
+          <div className="shine" id="photo20"></div>
+          <div className="shine" id="photo20"></div>
+          <div className="shine" id="photo20"></div>
+          <div className="shine" id="photo20"></div>
+          <div className="shine" id="photo20"></div>
         </div>
       </div>
-      </>
-    )
-  }
+    </>
+  );
+};

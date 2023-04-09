@@ -8,7 +8,7 @@ display:flex;
 justify-content:space-around;
 align-items:center;
 font-size:1rem;
-position:sticky;
+width:100%;
 top:0;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 z-index:10;
@@ -17,17 +17,18 @@ z-index:10;
 {
     transition: 0.8s all ease;
 }
-
 `
 
 export const NavbarContainer = styled.div`
 display:flex;
+position:fixed;
 justify-content:space-between;
 height:80px;
-z-index:1;
+z-index:10;
 width:100%;
+background:#fff;
 padding:0 24px;
-max-width:1100px
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `
 export const  NavLogo = styled(LinkR)`
 justify-self:flex-start;
@@ -42,7 +43,7 @@ display:none;
 
 @media screen and (max-width:768px)
 {
-    display:block;
+    display:flex;
     margin-top:20px;
     transform = translate(-100%,60%);
     font-size:1.8rem;
@@ -107,6 +108,7 @@ outline:none;
 cursor:pointer;
 transition:all 0.2s ease-in-out;
 text-decoration:none;
+margin-right:20px;
 
 &:hover{
     transition:all 0.2s ease-in-out;
@@ -114,3 +116,34 @@ text-decoration:none;
     color:#f58934;
 }
 `
+export const NavCart = styled(LinkR)`
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+
+@media screen and (max-width:768px)
+{
+ margin-right:20px;
+}
+`
+export const AvatarSec = styled.div`
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+`
+export const P = styled.p`
+font-size:12px;
+font-weight:bold;
+color:black;
+text-transform:capitalize;
+
+`
+export const IMG = styled.img`
+width:40px;
+border-radius:20px;
+`
+
+

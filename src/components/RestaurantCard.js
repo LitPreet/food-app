@@ -2,12 +2,14 @@ import { IMG_CDN_URL } from "../../constant"
 import { TbDiscount2 } from 'react-icons/tb';
 
 const RestrauntCard =({name,cuisines,cloudinaryImageId,lastMileTravelString,costForTwoString,slaString,avgRating})=>{
-    
+    function fn(text) {
+        return text.slice(0, 31) + (text.length > 31 ? "..." : "");
+      }
     return (
         <div className='card'>
             <img src = {IMG_CDN_URL + cloudinaryImageId} className="card-img"/>
             <p className="f-name">{name}</p>
-            <p className="cuisnines">{cuisines.join(',')}</p>
+            <p className="cuisnines">{fn(cuisines.join(','))}</p>
             <div className="star-row">
                <p className="rate"><img className="star" src="https://cdn-icons-png.flaticon.com/512/3334/3334338.png"/>{avgRating}</p>
                <p className="time">{slaString}</p>

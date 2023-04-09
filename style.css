@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@400;500&family=Fredoka+One&family=Lora:ital@1&family=Noto+Serif+Gujarati:wght@300&family=Orbitron&family=Poppins&family=Roboto&family=Space+Grotesk&display=swap'); */
+
 @import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Dancing+Script:wght@400;500&family=Fredoka+One&family=Lora:ital@1&family=Merienda&family=Noto+Serif+Gujarati:wght@300&family=Orbitron&family=Poppins&family=Roboto&family=Space+Grotesk&display=swap");
 
 * {
@@ -22,6 +22,16 @@ body {
 }
 .logo-img{
   width:60px;
+}
+.trolley{
+  width: 40px;
+}
+.cart-num{
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-size: 14px;
+  color: black;
+  border-radius: 20px;
 }
 .other {
   font-size: 17px;
@@ -64,7 +74,7 @@ body {
   width: 100%;
   margin-top: 0;
   padding: 20px;
-  background-color: #c9350c;
+  background-color: #fcdcd8;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -131,8 +141,10 @@ body {
   font-size: 15px;
   margin-top: 7px;
   align-items: center;
+  text-align: center;
   justify-content: center;
   color: #a12a03;
+  margin-left: 0;
 }
 .delivery {
   text-transform: uppercase;
@@ -218,7 +230,10 @@ body {
   }
 }
 @media (max-width: 768px) and (min-width: 600px) {
-  
+  .trolley{
+    width: 30px;
+  }
+ 
   .pop-p {
     font-size: 30px;
   }
@@ -252,7 +267,9 @@ body {
 
 @media (max-width: 600px) and (min-width: 500px) {
 
-  
+  .trolley{
+    width: 30px;
+  }
   .other,
   .add {
     font-size: 12px;
@@ -289,7 +306,9 @@ body {
   }
 }
 @media (max-width: 500px) and (min-width: 400px) {
-
+  .trolley{
+    width: 30px;
+  }
   .other,
   .add {
     font-size: 12px;
@@ -335,7 +354,9 @@ body {
   .add {
     font-size: 12px;
   }
- 
+  .trolley{
+    width: 30px;
+  }
  
   .bir-img {
     width: 30px;

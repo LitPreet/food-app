@@ -8,13 +8,8 @@ import { BsSearch } from 'react-icons/bs';
 import Shimmer from "./shimmer";
 import EmblaCarousel from './carousel';
 import { Link } from "react-router-dom";
+import {filterData} from './utils/filterData'
 
-function filterData(searchText,restaurants)
-{
-    const filterData = restaurants.filter((restaurant) =>
-    restaurant?.data?.name.toLowerCase().includes(searchText.toLowerCase()));
-    return filterData;
-}
 const OPTIONS = { slidesToScroll: 'auto', containScroll: 'trimSnaps' }
 const SLIDE_COUNT = 5
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
@@ -24,18 +19,21 @@ const Body = ()=>{
     const [searchText,setSearchText] =  useState("");
     const [allRestaurants, setAllRestaurants] = useState([]);
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);
-  useEffect(()=>{
-    getRestaurants();
-   },[]);
-
-    async function getRestaurants()
-    {
-        const data = await fetch("https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
-        const json = await data.json();
-        setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-        setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
-    } 
-    return (allRestaurants.length == 0) ? <Shimmer/> : ( 
+    useEffect(()=>{
+      getRestaurants();
+     },[]);
+    
+  
+      async function getRestaurants()
+      {
+          const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING");
+          const json = await data.json();
+          setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+          setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
+      } 
+  
+    return (allRestaurants.length == 0) ? <Shimmer/>
+      : ( 
         <>
          <EmblaCarousel slides={SLIDES} options={OPTIONS} />
          <p className="pop-p">Popular Cuisines</p>

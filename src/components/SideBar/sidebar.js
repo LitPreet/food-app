@@ -1,6 +1,8 @@
 import React from "react";
 import {SidebarContainer,Icon,CloseIcon,SidebarWrapper,SidebarMenu,SidebarLink,SideBtnWrap,SidebarRoute} from './sidebarElement';
+import { useAuth0 } from "@auth0/auth0-react";
 const SideBar = ({isOpen,toggle})=>{
+    const { loginWithRedirect, isAuthenticated, logout, user } = useAuth0();
     return (
 <>
 <SidebarContainer isOpen = {isOpen} onClick={toggle}>
@@ -15,15 +17,28 @@ const SideBar = ({isOpen,toggle})=>{
             <SidebarLink to="/about" onClick={toggle}>
                 About
             </SidebarLink>
-            <SidebarLink to="/contact" onClick={toggle}>
-                Contact
+            <SidebarLink to="/instamart" onClick={toggle}>
+                Instamart
             </SidebarLink>
-            <SidebarLink to="/signup" onClick={toggle}>
-                Sign up
-            </SidebarLink>
+            {/* <SidebarLink to="/cart" onClick={toggle}>
+                Cart
+            </SidebarLink> */}
         </SidebarMenu>
         <SideBtnWrap>
-            <SidebarRoute to="/signin" onClick={toggle}>Sign In</SidebarRoute>
+        {isAuthenticated ?  (
+              <SidebarRoute
+                onClick={() =>
+                  logout({ logoutParams: { returnTo: window.location.origin } })
+                }
+              >
+                Log Out
+              </SidebarRoute>
+            ): (
+              <SidebarRoute onClick={() => loginWithRedirect()}>
+                Log In
+              </SidebarRoute>
+            )}
+        
         </SideBtnWrap>
     </SidebarWrapper>
 </SidebarContainer>
