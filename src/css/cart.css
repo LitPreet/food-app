@@ -651,7 +651,7 @@ height: 100vh;
         }
 
         @media  (max-width: 430px) and (min-width: 300px){
-          .section{
+            .section{
          display: flex;
          align-items:center;
          flex-direction: column;
@@ -689,7 +689,7 @@ height: 100vh;
             width: 100%;
           }
           .total-price-tag{
-            font-size:12px;
+            font-size:16px;
           }
           .check-btn{
             width:242px;
@@ -702,10 +702,13 @@ height: 100vh;
             font-size: 16px;
           }
           .content h1 {
-            font-size: 24px;
-          }
-          .content p {
             font-size: 14px;
+          }
+          .content h1 span {
+            font-size: 15px;
+        }
+          .content p {
+            font-size: 12px;
           }
           .item-name{
             font-size: 15px;
