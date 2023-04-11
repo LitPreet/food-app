@@ -1,6 +1,5 @@
 import React , { lazy ,Suspense } from 'react';
 import ReactDOM  from 'react-dom/client';
-import Header from './src/components/header';
 import HeaderR from './pages';
 import Body from './src/components/body';
 import Footer from './src/components/footer';

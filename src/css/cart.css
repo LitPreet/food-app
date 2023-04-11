@@ -6,7 +6,9 @@
 body{
     height: auto;
 }
-
+.tick{
+  width:300px;
+}
 
 .toast {
   left: 0;
@@ -318,6 +320,7 @@ background-color: #47cf73;
     width: 350px;
     height: 40px;
     border: none;
+    cursor: pointer;
 }
 
   

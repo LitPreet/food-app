@@ -56,14 +56,19 @@ const Navbar = ({ toggle }) => {
           <NavBtn>
             {isAuthenticated ?  (
               <NavBtnLink
-                onClick={() =>
-                  logout({ logoutParams: { returnTo: window.location.origin } })
-                }
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                logout({ logoutParams: { returnTo: window.location.origin } });
+              }}
               >
                 Log Out
               </NavBtnLink>
             ): (
-              <NavBtnLink onClick={() => loginWithRedirect()}>
+              <NavBtnLink   type="button"  onClick={(e) => {
+                e.preventDefault();
+                loginWithRedirect();
+              }}>
                 Log In
               </NavBtnLink>
             )}

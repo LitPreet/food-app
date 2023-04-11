@@ -10,16 +10,21 @@ import {
   clearCart,
 } from "./utils/CartSlice";
 import { FaTrashAlt } from "react-icons/fa";
-import { AiFillInfoCircle } from 'react-icons/ai';
-import { RxCross1 } from 'react-icons/rx'
+import { AiFillInfoCircle } from "react-icons/ai";
+import { RxCross1 } from "react-icons/rx";
 import "../css/cart.css";
+import '../css/animation.css';
 import swiggy from "../assets/img/Swiggy-Logo-PNG.png";
+import { useAuth0 } from "@auth0/auth0-react";
 import EmptyCart from "./EmptyCart";
 
 const Cart = () => {
   const cartItems = useSelector((store) => store.cart.items);
   const [emptyCart, setEmptyCart] = useState(cartItems.length === 0);
   const dispatch = useDispatch();
+  const { isAuthenticated } = useAuth0();
+ 
+
 
   const handleDeleteItem = (item) => {
     dispatch(removeItem(item));
@@ -33,7 +38,7 @@ const Cart = () => {
     setEmptyCart(true);
   };
 
-   const [showToast, setShowToast] = useState(false);
+  const [showToast, setShowToast] = useState(false);
 
   useEffect(() => {
     // show the toast message for 5 seconds when showToast is true
@@ -45,9 +50,31 @@ const Cart = () => {
     }
   }, [showToast]);
 
-  // Update the height of the div whenever cartItems change
+  //tick logic
+  const [showTick, setShowTick] = useState(false);
+  useEffect(() => {
+    if (showTick) {
+      const sectionEl = document.querySelector(".section");
+      sectionEl.style.display = "none";
+      dispatch(clearCart());
+    }
+  }, [showTick, dispatch]);
 
- 
+  const handleBackToShopping = () => {
+    // Redirect to home page
+    window.location.href = "/";
+    // Clear cart items
+    dispatch(clearCart());
+    // Set `showTick` to false to hide the tick mark
+    setShowTick(false);
+  };
+
+  const handleCheckout = () => {
+    // Set `showTick` to true to display the tick mark
+    setShowTick(true);
+  };
+
+  // Update the height of the div whenever cartItems change
 
   useEffect(() => {
     const sectionEl = document.querySelector(".section");
@@ -63,40 +90,53 @@ const Cart = () => {
       }
       sectionEl.style.height = divHeight;
     }
-      
-    
   }, [cartItems]);
 
   function fn(text) {
     return text.slice(0, 15) + (text.length > 15 ? "..." : "");
   }
 
+ 
+
   return emptyCart ? (
     <EmptyCart />
   ) : (
     <>
-    {/* toast animation  */}
-    {showToast && (
+      {/* toast animation  */}
+      {showToast && (
         <div className="toast active">
           <div className="toast-content">
-            <AiFillInfoCircle  style={{color:"#2770ff",fontSize:"30px"}} />
+            <AiFillInfoCircle style={{ color: "#2770ff", fontSize: "30px" }} />
 
             <div className="messagen">
               <span className="texty texty-1">Info</span>
               <span className="texty texty-2">
-                 Please login in for checkout
+                Please login in for checkout
               </span>
             </div>
-          <button className="cross" onClick={() => setShowToast(false)}>
-      <RxCross1  />
-    </button>
+            <button className="cross" onClick={() => setShowToast(false)}>
+              <RxCross1 />
+            </button>
           </div>
 
           <div className="progress active"></div>
         </div>
       )}
+      {/* {tick animation} */}
+      {showTick && (
+        <>
+        <div className="tickCont">
+<img src="https://cdn.dribbble.com/users/4358240/screenshots/14825308/media/84f51703b2bfc69f7e8bb066897e26e0.gif" className="tick"/>
+<p className="tick-p">Payment Successful</p>
+<p className="tick-p">Enjoy your meal ! Your product is arriving soon </p>
+<button className="tickBtn" onClick={handleBackToShopping}>Back to shopping</button>
+</div>
+</>
+      )
+
+      }
       {/* main start  */}
-      <div className="section" style={{ overflowY: "scroll"}}>
+      <div className="section" style={{ overflowY: "scroll" }}>
         <div className="cart-container">
           <p className="cart-head">Your cart</p>
           <div className="clear-cart-btn">
@@ -186,13 +226,32 @@ const Cart = () => {
             <p className="total-price-tag">
               Total price: ₹{" "}
               {cartItems.length &&
-                cartItems
-                  .map((item) => (item.itemCount * parseInt(item?.price)) / 100)
-                  .reduce((acc, curr) => acc + curr, 0)
-                  .toFixed(2)}
+                parseInt(
+                  cartItems
+                    .map((item) => (item.itemCount * parseInt(item?.price)) / 100)
+                    .reduce((acc, curr) => acc + curr, 0)
+                    * 0.9 // Apply a 10% discount by multiplying the total price by 0.9
+                )
+                  }
             </p>
 
-            <button className="check-btn" id="btun" onClick={() => setShowToast(true)}>Checkout</button>
+            {isAuthenticated ? (
+              <button
+                className="check-btn"
+                id="btun"
+                onClick={handleCheckout}
+              >
+                Checkout
+              </button>
+            ) : (
+              <button
+                className="check-btn"
+                id="btun"
+                onClick={() => setShowToast(true)}
+              >
+                Checkout
+              </button>
+            )}
             <button className="shop-btns">Continue Shopping</button>
           </div>
         )}

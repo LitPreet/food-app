@@ -9,7 +9,7 @@ export const swiggy_api_URL =
 
 // Swiggy API to get Restaurant Menu data with corsanywhere
 export const swiggy_menu_api_URL =
-  // "https://corsanywhere.herokuapp.com/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=";
+  // "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=";
   "https://instafood.onrender.com/api/menu?lat=21.1702401&lng=72.83106070000001&restaurantId=";
 
  // menu items api card type key
